@@ -1,0 +1,118 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+    background-color: gray;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    height: 5rem;
+    width: 10rem;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    cursor: pointer;
+}
+
+.start-button {
+    background-color: rgb(98, 175, 98);
+}
+
+.reset-button {
+    background-color: rgb(180, 102, 102);
+}
+
+.deck {
+    height: 10rem;
+    width: 7rem;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border-radius: .5rem;
+    color: white;
+    user-select: none;
+}
+
+.initial-deck {
+    background-color: blue;
+}
+
+.card {
+    user-select: none;
+    position: relative;
+    height: 15rem;
+    width: 10rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.card::before,
+.card::after {
+    position: absolute;
+    content: attr(data-value);
+    font-size: 1rem;
+    -webkit-text-stroke-width: 0;
+}
+
+.card::before {
+    top: .5rem;
+    left: .5rem;
+}
+
+.card::after {
+    bottom: .5rem;
+    right: .5rem;
+    transform: rotate(180deg);
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player {
+    border: 1px solid black;
+    flex-direction: row;
+    padding: .5rem;
+    height: 100%;
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.player-cards {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around; 
+}
